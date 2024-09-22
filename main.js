@@ -481,7 +481,7 @@ function speedFactorial(num) {
 let devReps = 100;
 const calcSpeed = function() {
     let miningSpeed = baseSpeed;
-    let reps = 1;
+    let reps = 25000;
     if (currentWorld < 2 && player.gears["gear31"])
         miningSpeed = baseSpeed - 5;
     if (currentWorld < 2 && player.gears["gear2"])
@@ -497,7 +497,7 @@ const calcSpeed = function() {
     reps += player.gears["gear19"] ? 10 : 0;
     const extraSpeed = 0 + (player.gears["gear32"] ? 25 : 0) + (player.gears["gear33"] ? 75 : 0);
     if (currentWorld === 1.1) {
-        if (debug) return {speed: 5, reps: devReps, extra:0}
+        if (player) return {speed: 5, reps: reps, extra:0}
         const sr1Level = player.upgrades["pickaxe27"].level;
         if (sr1Level < 4) return {speed: 10 - sr1Level, reps: 1, extra:extraSpeed}
         else return {speed: 7, reps: Math.round((-2 + sr1Level)*(player.gears["gear36"] ? 1.75 : 1)), extra:extraSpeed}
