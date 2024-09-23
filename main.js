@@ -481,7 +481,7 @@ function speedFactorial(num) {
 let devReps = 100;
 const calcSpeed = function() {
     let miningSpeed = baseSpeed;
-    let reps = 250000000000;
+    let reps = 25000;
     if (currentWorld < 2 && player.gears["gear31"])
         miningSpeed = baseSpeed - 5;
     if (currentWorld < 2 && player.gears["gear2"])
