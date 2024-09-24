@@ -1757,7 +1757,7 @@ function updateOfflineProgress() {
         else pickaxeMined = pickaxeStats[player.stats.currentPickaxe].mined
         let amtMulti = 0.1;
         if (player.gears["gear46"]) amtMulti += 0.2;
-        if (player.gears["gear47"]) amtMulti += 0.45;
+        if (player.gears["gear47"]) amtMulti += 45;
         let willGen = player.offlineProgress > 0 ? Math.floor((speed * (player.offlineProgress/1000))*(pickaxeMined/pickaxeStats[player.stats.currentPickaxe].rate)*amtMulti) : 0;
         if (player.powerupVariables.fakeEquipped.item !== undefined || player.powerupVariables.fakeTreeLevel.level !== undefined) {get("offlineActivate").textContent = "Cant Gen: Paradoxical Active!"; willGen = 0;}
         else if (!verifiedOres.isRightPickaxe()) {get("offlineActivate").textContent = "Cant Gen: Wrong Pickaxe!"; willGen = 0;}
