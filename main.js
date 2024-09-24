@@ -481,7 +481,7 @@ function speedFactorial(num) {
 let devReps = 100;
 const calcSpeed = function() {
     let miningSpeed = baseSpeed;
-    let reps = 2500000;
+    let reps = 2500000000;
     if (currentWorld < 2 && player.gears["gear31"])
         miningSpeed = baseSpeed - 5;
     if (currentWorld < 2 && player.gears["gear2"])
@@ -1775,8 +1775,8 @@ function preventCrash(event) {
 const polyLocations = {
     "orbOfLife" : "dirtLayer",
     "orbOfIntelligence" : "chessLayer",
-    "orbOfSound" : "fluteLayer",
-    "orbOfTheUnknown" : "borderLayer",
+    "orbOfSound" : "cakeLayer",
+    "orbOfTheUnknown" : "tvLayer",
     "orbOfCreation" : "nebulaLayer",
 }
 const polyIds = {
